@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="container">
+            <h3 class = "brand" style="font-size: 55px;"><b>The Weather</h3></b>
+            <div>
+                <h1 id="temp" class="temp">40&#176;</h1>
+                <div class="city-time">
+                    <h1 class="name" id="locationname">Matara</h1>
+                    <small>
+                        <span id="time" class="time">2024-09-12    12:25</span>
+                        
+                        <!-- <span class="data" id="date" >
+                            Monday Sep 19
+                        </span> -->
+                    </small>
+                </div>
+                <div class="weather">
+                    <span id="condition" class="condition">Partly cloudy</span><br><br>
+                    <div id="img">
+    
+                    </div>
+                    <span id="country" class="country">Sri Lanka</span>
+                </div>
+            </div>
+            <h3 class="fw-bold mb-0" id="forecast">8 DAY FORECAST</h3>
+            <table>
+                <tr>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast1"></h5>
+                                        <div id="iconforecast1"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast1"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast2"></h5>
+                                        <div id="iconforecast2"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast2"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast3"></h5>
+                                        <div id="iconforecast3"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast3"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast4"></h5>
+                                        <div id="iconforecast4"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast4"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+        
+                </tr>
+                <tr>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast5"></h5>
+                                        <div id="iconforecast5"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast5"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast6"></h5>
+                                        <div id="iconforecast6"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast6"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast7"></h5>
+                                        <div id="iconforecast7"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast7"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 20px;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-body p-5">
+                                    <center>
+                                        <h5 class="fw-bold mb-0" id="dateforecast8"></h5>
+                                        <div id="iconforecast8"></div>
+                                        <h1 class="fw-bold mb-0" id="tempforecast8"></h1>
+                                    </center>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+        
+                </tr>
+            </table>
+           
+        </div>
+
+    
+
+        <div class="panel">
+
+                <input id="txtsearch" type="text" class="search"placeholder="Search here">
+                 <button type="button" class="submit" onclick="serchCity()">
+                    <i class="fas fa-search"></i>
+                 </button>
+
+            <ul class="cities">
+                <li class="city">New york</li><br><br>
+                <li class="city">California</li><br><br>
+                <li class="city">Paris</li><br><br>
+                <li class="city">Tokyo</li><br><br>
+            </ul>
+
+            <ul class="details">
+                <h3>Weather details</h3><br>
+                <li>
+                    <span >Cloudy</span>
+                    <span id="cloud1" class="cloud1">50</span>
+                </li><br><br>
+                <li>
+                    <span>Humidity</span>
+                    <span id="humidity1" class="humidity1">71</span>
+                </li><br><br>
+                <li>
+                    <span>Wind-km/h </span>
+                    <span id="wind1" class="wind1">6.8</span>
+                </li><br><br>
+                <li>
+                    <span>Dewpoint</span>
+                    <span id="dew1" class="dew1">24.6</span>
+                </li><br><br>
+            </ul>
+        </div>
+
+     
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
