@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,149 +17,73 @@
                     <h1 class="name" id="locationname">Matara</h1>
                     <small>
                         <span id="time" class="time">2024-09-12    12:25</span>
-                        
-                        <!-- <span class="data" id="date" >
-                            Monday Sep 19
-                        </span> -->
+                          
+                        </span> 
                     </small>
                 </div>
                 <div class="weather">
+                    <img src="sun.png" id="pic" >
                     <span id="condition" class="condition">Partly cloudy</span><br><br>
+                    
                     <div id="img">
     
                     </div>
                     <span id="country" class="country">Sri Lanka</span>
                 </div>
-            </div>
+            </div><br><br>
+            
+           
             <h3 class="fw-bold mb-0" id="forecast">8 DAY FORECAST</h3>
+
             <table>
                 <tr>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast1"></h5>
-                                        <div id="iconforecast1"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast1"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc1">Monday</h3>
+                        <img src="sun.png" >
+                        <p class="temp1">25°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast2"></h5>
-                                        <div id="iconforecast2"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast2"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc2">Tuesday</h3>
+                        <img src="cloudy.png" >
+                        <p class="temp1">20°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast3"></h5>
-                                        <div id="iconforecast3"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast3"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc3">Wednesday</h3>
+                    <img src="rain.png" >
+                    <p class="temp1">18°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast4"></h5>
-                                        <div id="iconforecast4"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast4"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc4">Thursday</h3>
+                        <img src="storm.png">
+                        <p class="temp1">22°C</p>
                     </td>
         
                 </tr>
                 <tr>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast5"></h5>
-                                        <div id="iconforecast5"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast5"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc5">Friday</h3>
+                        <img src="sun.png">
+                        <p class="temp1">26°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast6"></h5>
-                                        <div id="iconforecast6"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast6"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc6">Saturday</h3>
+                        <img src="cloudy.png">
+                        <p class="temp1">21°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast7"></h5>
-                                        <div id="iconforecast7"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast7"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc7">Sunday</h3>
+                    <img src="rain.png">
+                    <p class="temp1">19°C</p>
                     </td>
                     <td style="padding: 20px;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                                <div class="modal-body p-5">
-                                    <center>
-                                        <h5 class="fw-bold mb-0" id="dateforecast8"></h5>
-                                        <div id="iconforecast8"></div>
-                                        <h1 class="fw-bold mb-0" id="tempforecast8"></h1>
-                                    </center>
-        
-        
-                                </div>
-                            </div>
-                        </div>
+                        <h3 id="fc8">Next Monday</h3>
+                        <img src="sun.png" >
+                        <p class="temp1">24°C</p>
                     </td>
         
                 </tr>
             </table>
+        
            
         </div>
 
@@ -168,7 +93,7 @@
 
                 <input id="txtsearch" type="text" class="search"placeholder="Search here">
                  <button type="button" class="submit" onclick="serchCity()">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search"></i> Search
                  </button>
 
             <ul class="cities">
@@ -199,6 +124,7 @@
             </ul>
         </div>
 
+    
      
     </div>
 

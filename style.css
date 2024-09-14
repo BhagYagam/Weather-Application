@@ -99,7 +99,17 @@ h1,h3{
 }
 
 .submit{
-    position: absolute;
+    background-color: #ffffff; /* Green background */
+    border: none;              /* Remove border */
+    color: rgb(0, 0, 0);              /* White text */
+    padding: 10px 20px;        /* Padding */
+    text-align: center;        /* Center text */
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     /* Inline-block element */
+    font-size: 16px;           /* Font size */
+    cursor: pointer;           /* Pointer cursor on hover */
+    border-radius: 5px;        /* Rounded corners */
+    /* position: absolute;
     top: 0;
     right: 0;
     padding: 1.5em;
@@ -109,7 +119,7 @@ h1,h3{
     color: blanchedalmond;
     cursor: pointer;
     font-size: 1.2em;
-    transition: 0.4s;
+    transition: 0.4s; */
 }
 
 .submit:hover{
