@@ -83,18 +83,17 @@ function serchCity(){
 function forecast() {
     let txtsearch = document.getElementById("txtsearch").value
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&days=9&aqi=no`)
-    // fetch(`https://api.weatherapi.com/v1/forecast.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&days=9&aqi=no`)
         .then(res => res.json())
         .then(data => {
 
             console.log(data);
             let fc1=document.getElementById("fc1");
-            fc1.innerText =data.forecast.forecastday.date;
-            console.log(data.forecast.forecastday.date);
+            fc1.innerText =data.forecast.forecastday;
+            console.log(data.forecast.forecastday);
 
             let fc2=document.getElementById("fc2");
-            fc2.innerText =data.forecast.forecastday.date;
-            console.log(data.forecast.forecastday.date);
+            fc2.innerText =data.forecast.forecastday;
+            console.log(data.forecast.forecastday);
 
             let fc3=document.getElementById("fc3");
             fc3.innerText =data.forecast.forecastday.date;
@@ -120,43 +119,29 @@ function forecast() {
             fc8.innerText =data.forecast.forecastday.date;
             console.log(data.forecast.forecastday.date);
 
-
-
-            // document.getElementById("dateforecast1").innerHTML = data.forecast.forecastday[1].date
-            // document.getElementById("iconforecast1").innerHTML = `<img src="${data.forecast.forecastday[1].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast1").innerHTML = data.forecast.forecastday[1].day.mintemp_c + "-" + data.forecast.forecastday[1].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast2").innerHTML = data.forecast.forecastday[2].date
-            // document.getElementById("iconforecast2").innerHTML = `<img src="${data.forecast.forecastday[2].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast2").innerHTML = data.forecast.forecastday[2].day.mintemp_c + "-" + data.forecast.forecastday[2].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast3").innerHTML = data.forecast.forecastday[3].date
-            // document.getElementById("iconforecast3").innerHTML = `<img src="${data.forecast.forecastday[3].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast3").innerHTML = data.forecast.forecastday[3].day.mintemp_c + "-" + data.forecast.forecastday[3].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast4").innerHTML = data.forecast.forecastday[4].date
-            // document.getElementById("iconforecast4").innerHTML = `<img src="${data.forecast.forecastday[4].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast4").innerHTML = data.forecast.forecastday[4].day.mintemp_c + "-" + data.forecast.forecastday[4].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast5").innerHTML = data.forecast.forecastday[5].date
-            // document.getElementById("iconforecast5").innerHTML = `<img src="${data.forecast.forecastday[5].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast5").innerHTML = data.forecast.forecastday[5].day.mintemp_c + "-" + data.forecast.forecastday[5].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast6").innerHTML = data.forecast.forecastday[6].date
-            // document.getElementById("iconforecast6").innerHTML = `<img src="${data.forecast.forecastday[6].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast6").innerHTML = data.forecast.forecastday[6].day.mintemp_c + "-" + data.forecast.forecastday[6].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast7").innerHTML = data.forecast.forecastday[7].date
-            // document.getElementById("iconforecast7").innerHTML = `<img src="${data.forecast.forecastday[7].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast7").innerHTML = data.forecast.forecastday[7].day.mintemp_c + "-" + data.forecast.forecastday[7].day.maxtemp_c + "°C"
-
-            // document.getElementById("dateforecast8").innerHTML = data.forecast.forecastday[8].date
-            // document.getElementById("iconforecast8").innerHTML = `<img src="${data.forecast.forecastday[8].day.condition.icon}" alt="" width="70px" height="70px">`
-            // document.getElementById("tempforecast8").innerHTML = data.forecast.forecastday[8].day.mintemp_c + "-" + data.forecast.forecastday[8].day.maxtemp_c + "°C"
-        })
+            })
 }
 
+// function forecast() {
+//     let txtsearch = document.getElementById("txtsearch").value;
+//     fetch(`https://api.weatherapi.com/v1/forecast.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&days=9&aqi=no`)
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data);
 
+//             // Access the forecast days array
+//             let forecastDays = data.forecast.forecastday;
+
+//             // Display forecast dates
+//             for (let i = 0; i < forecastDays.length; i++) {
+//                 let fcElement = document.getElementById(`fc${i + 1}`);
+//                 if (fcElement) {
+//                     fcElement.innerText = forecastDays[i].date;
+//                     console.log(forecastDays[i].date);
+//                 }
+//             }
+//         });
+// }
 
 
 
