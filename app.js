@@ -63,7 +63,7 @@ function serchCity(){
     fetch(`https://api.weatherapi.com/v1/current.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&aqi=no`)
     .then(res=>res.json())
     .then(data =>{
-        console.log(data); 
+        console.log("test1"); 
 
 
         locationname.innerText = data.location.name;
@@ -78,45 +78,53 @@ function serchCity(){
         img.src = data.current.condition.icon;
            
     })
+    forecast();
 }
 
-function forecast() {
-    let txtsearch = document.getElementById("txtsearch").value
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&days=9&aqi=no`)
-        .then(res => res.json())
-        .then(data => {
-
+ function forecast() {
+     let txtsearch = document.getElementById("txtsearch").value
+     fetch(`https://api.weatherapi.com/v1/forecast.json?key=bec731a0d7e64575982123958241009&q=${txtsearch}&days=5&aqi=no`)
+         .then(res => res.json())
+         .then(data => {
             console.log(data);
-            let fc1=document.getElementById("fc1");
-            fc1.innerText =data.forecast.forecastday;
+            console.log(data.forecast);
             console.log(data.forecast.forecastday);
+            console.log(data.forecast.forecastday[0]);
+            console.log(data.forecast.forecastday[0].date);
+            
+            // console.log("Forecast : "+data.forecast);
+
+            // console.log("forecast"+ data);
+            let fc1=document.getElementById("fc1");
+            fc1.innerText =data.forecast.forecastday[0].date;
+            console.log("1"+data.forecast);
 
             let fc2=document.getElementById("fc2");
-            fc2.innerText =data.forecast.forecastday;
+            fc2.innerText =data.forecast.forecastday[1].date;
             console.log(data.forecast.forecastday);
 
             let fc3=document.getElementById("fc3");
-            fc3.innerText =data.forecast.forecastday.date;
+            fc3.innerText =data.forecast.forecastday[2].date;
             console.log(data.forecast.forecastday.date);
 
             let fc4=document.getElementById("fc4");
-            fc4.innerText =data.forecast.forecastday.date;
+            fc4.innerText =data.forecast.forecastday[3].date;
             console.log(data.forecast.forecastday.date);
 
             let fc5=document.getElementById("fc5");
-            fc5.innerText =data.forecast.forecastday.date;
+            fc5.innerText =data.forecast.forecastday[4].date;
             console.log(data.forecast.forecastday.date);
 
             let fc6=document.getElementById("fc6");
-            fc6.innerText =data.forecast.forecastday.date;
+            fc6.innerText =data.forecast.forecastday[5].date;
             console.log(data.forecast.forecastday.date);
 
             let fc7=document.getElementById("fc7");
-            fc7.innerText =data.forecast.forecastday.date;
+            fc7.innerText =data.forecast.forecastday[6].date;
             console.log(data.forecast.forecastday.date);
 
             let fc8=document.getElementById("fc8");
-            fc8.innerText =data.forecast.forecastday.date;
+            fc8.innerText =data.forecast.forecastday[7].date;
             console.log(data.forecast.forecastday.date);
 
             })
